@@ -1,0 +1,211 @@
+/* miniprogram/pages/list/list.wxss */
+.head {
+  display: flex;
+  background-color: #eee;
+  justify-content: center;
+}
+.head-button {
+  margin: 10rpx 10rpx;
+  background-color: #eee;
+}
+.head-button::after{
+    border: none;
+}
+.choose {
+  background-color: #33c9ff;
+}
+.comment-img {
+  width: 100%;
+  height: 364rpx;
+  margin: 8rpx 0 0;
+  /* background-color: #f4f5f7; */
+}
+
+.comment {
+  font-size: 32rpx;
+  margin: 0 0 13rpx;
+  line-height: 1.5;
+}
+
+.comment-quote {
+  width: 28rpx;
+  height: 46rpx;
+}
+
+.comment-quote-left {
+  margin-right: 6rpx;
+}
+
+.comment-quote-right {
+  margin-left: 6rpx;
+}
+
+.time {
+  font-size: 32rpx;
+  padding: 16rpx 0 6rpx;
+}
+
+.time-date {
+  font-size: 60rpx;
+}
+
+.time-hour {
+  margin-left: 20rpx;
+}
+
+.detail {
+  padding: 0 36rpx;
+  margin-bottom: 88rpx;
+}
+
+/**按钮样式**/
+
+.add {
+  position: fixed;
+  bottom: 0;
+  width: 400rpx;
+  height: 210rpx;
+  left: 50%;
+  margin-left: -200rpx;
+}
+
+.add-item, .add-icon {
+  position: absolute;
+  bottom: 80rpx;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #33c9ff;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.add-item {
+  margin-left: -50rpx;
+  width: 100rpx;
+  height: 100rpx;
+  font-size: 30rpx;
+  transition: transform 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.add-icon {
+  margin-left: -60rpx;
+  width: 120rpx;
+  height: 120rpx;
+  font-size: 80rpx;
+}
+
+.add-icon-txt {
+  margin-top: -10rpx;
+}
+
+.active .add-item:nth-of-type(1) {
+  transform: rotate(10deg) translateX(-140rpx);
+}
+
+.active .add-item:nth-of-type(1) .add-item-txt {
+  transform: rotate(-10deg);
+}
+
+.active .add-item:nth-of-type(2) {
+  transform: rotate(90deg) translateX(-140rpx);
+}
+
+.active .add-item:nth-of-type(2) .add-item-txt {
+  transform: rotate(-90deg);
+}
+
+.active .add-item:nth-of-type(3) {
+  transform: rotate(170deg) translateX(-140rpx);
+}
+
+.active .add-item:nth-of-type(3) .add-item-txt {
+  transform: rotate(-170deg);
+}
+
+.active .add-icon {
+  transform: rotate(45deg);
+}
+
+/**书摘样式**/
+
+.digest-book {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  height: 204rpx;
+  background-color: #f4f5f7;
+  padding: 26rpx 28rpx;
+  margin: 24rpx 0 0;
+}
+
+.digest-book-title {
+  font-size: 28rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-all;
+}
+
+.digest-book-score {
+  margin-top: 14rpx;
+}
+
+.digest-book-detail {
+  display: -webkit-box;
+  margin-top: 14rpx;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.digest-book-cover {
+  width: 102rpx;
+  height: 148rpx;
+  flex: 0 0 102rpx;
+  margin-right: 28rpx;
+}
+
+.digest-book-info {
+  flex: 1;
+  font-size: 20rpx;
+  color: #737373;
+  overflow: hidden;
+}
+
+/*日志样式*/
+.journal {
+  box-sizing: border-box;
+}
+
+.journal-title {
+  font-size: 32rpx;
+  margin-left: 20rpx;
+  line-height: 1.5;
+}
+
+.journal-classify {
+  font-size: 26rpx;
+  margin-left: 20rpx;
+}
+
+.journal-textbox {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20rpx;
+  margin-top: 20rpx;
+  background-color: #f4f5f7;
+}
+.journal-text {
+  font-size: 28rpx;
+  line-height: 1.5;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,13 @@
+<template name="digest">
+  <view class="digest-cnt">
+    <view class="digest-info">
+      <view class="digest-info-grades">评分：{{rating.average}}</view>
+      <view class="digest-info-detail">
+        {{authors}} / {{publisher}} / {{pages}}页 / {{binding}} / {{price}} / {{pubdate}}
+      </view>
+    </view>
+    <view class="digest-cover">
+      <image src="{{images.small}}" mode="aspectFit"></image>
+    </view>
+  </view>
+</template>

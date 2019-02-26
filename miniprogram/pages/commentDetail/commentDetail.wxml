@@ -1,0 +1,5 @@
+<!--miniprogram/pages/commentDetail/commentDetail.wxml-->
+<view class="comment">
+  <image mode="widthFix" class="comment-img" src="{{resource.img}}"></image>
+  <text class="comment-text">{{resource.comment}}</text>
+</view>

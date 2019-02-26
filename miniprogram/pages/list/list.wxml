@@ -1,0 +1,71 @@
+<!--miniprogram/pages/list/list.wxml-->
+<template name="time">
+  <view class="time">
+    <text class="time-date">{{date}}/</text>
+    <text class="time-month">{{month}}/{{year}}</text>
+    <text class="time-hour">{{hours}}:{{miniutes}}</text>
+  </view>
+</template>
+
+<template name="comment">
+  <view class="comment">
+    <image src="../../images/left-quote.png" class="comment-quote comment-quote-left"></image>
+    <text class="comment-main">{{comment}}</text>
+    <image src="../../images/right-quote.png" class="comment-quote comment-quote-right"></image>
+  </view>
+</template>
+
+<view class="head">
+  <button class="head-button {{select == 0 ? 'choose' : ''}}" bindtap="onAll" size="mini">全部</button>
+  <button class="head-button {{select == 1 ? 'choose' : ''}}" bindtap="onDigest" size="mini">书摘</button>
+  <button class="head-button {{select == 2 ? 'choose' : ''}}" bindtap="onComment" size="mini">神评论</button>
+  <button class="head-button {{select == 3 ? 'choose' : ''}}" bindtap="onJournal" size="mini">工作日志</button>
+</view>
+<scroll-view scroll-y class="wrapper">
+  <view wx:for="{{list}}" wx:key="_id" class="detail" data-index="{{index}}">
+
+    <view wx:if="{{item.saveType === 'digest'}}" bindtap="onOpenDigestDetail" data-index="{{index}}">
+      <template is="time" data="{{...item.timeInfo}}" />
+      <template is="comment" data="{{...item}}" />
+      <view class="digest-book">
+        <image class="digest-book-cover" src="{{item.info.images.small}}" mode="aspectFix"></image>
+        <view class="digest-book-info">
+          <view class="digest-book-title">{{item.info.title}}</view>
+          <view class="digest-book-score">评分：{{item.info.rating.averago}}</view>
+          <view class="digest-book-detail">{{item.info.authors}} / {{item.info.publisher}} / {{item.info.pages}}页 / {{item.info.binding}} / {{item.info.price}} / {{item.info.pubdate}}</view>
+        </view>
+      </view>
+    </view>
+
+    <view wx:elif="{{item.saveType === 'comment'}}" bindtap="onOpenCommentDetail" data-index="{{index}}">
+      <template is="time" data="{{...item.timeInfo}}" />
+      <template is="comment" data="{{...item}}" />
+      <image mode="aspectFill" class="comment-img" src="{{item.img}}"></image>
+    </view>
+
+    <view wx:else bindtap="onOpenJournalDetail" data-index="{{index}}">
+      <template is="time" data="{{...item.timeInfo}}" />
+      <view class="journal">
+        <text class="journal-title" space="nbsp">{{item.title}}  /</text>
+        <text class="journal-classify">{{item.classifyValue}}</text>
+        <view class="journal-textbox">
+          <text class="journal-text">{{item.text}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+<view class="add {{showToolbar ? 'active' : ''}}">
+  <view class="add-item" bindtap="onAddDigest" data-type="0">
+    <text class="add-item-txt">书摘</text>
+  </view>
+  <view class="add-item" bindtap="onAddComment" data-type="1">
+    <text class="add-item-txt">神评论</text>
+  </view>
+  <view class="add-item" bindtap="onAddJournal" data-type="2">
+    <text class="add-item-txt">工作\n日志</text>
+  </view>
+  <view class="add-icon" bindtap="onToggle">
+    <text class="add-icon-txt">+</text>
+  </view>
+</view>

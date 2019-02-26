@@ -1,0 +1,8 @@
+<!--miniprogram/pages/digestDetail/digestDetail.wxml-->
+<import src="../../common/template/digest.wxml" />
+
+<view class="digest">
+  <view class="digest-title">{{resource.info.title}}</view>
+  <template is="digest" data="{{...resource.info}}" />
+  <view class="digest-comment">{{resource.comment}}</view>
+</view>

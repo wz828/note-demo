@@ -1,0 +1,17 @@
+/* miniprogram/pages/digestDetail/digestDetail.wxss */
+@import "../../common/style/digest.wxss";
+
+/*特有代码*/
+.digest {
+  padding: 0 0 28rpx;
+}
+
+.digest-book {
+  margin: 20rpx 0 ;
+}
+
+.digest-comment {
+  margin-top: 10rpx;
+  padding: 0 30rpx; 
+}
+

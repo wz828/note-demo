@@ -1,0 +1,11 @@
+<!--miniprogram/pages/addDigest/addDigest.wxml-->
+<import src="../../common/template/digest.wxml" />
+
+<view wx:if="{{info.title}}" class="digest-wrapper">
+  <view class="digest">
+    <view class="digest-title">{{info.title}}</view>
+    <template is="digest" data="{{...info}}"/>
+  </view>
+  <textarea class="digest-comment" bindinput="onInput" placeholder="最精彩的书评，从这里开始！" maxlength="140" cursor-spacing="50px"></textarea>
+  <button class="digest-save" bindtap="onSave">保存</button>
+</view>

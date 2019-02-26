@@ -1,0 +1,12 @@
+<!--miniprogram/pages/addComment/addComment.wxml-->
+<view class="comment">
+  <view class="comment-uploader">
+    <view wx:if="{{showAddBtn}}" class="comment-uploader-add" bindtap="uploadImg">
+      <text class="comment-uploader-add-icon">+</text>
+      <text class="comment-uploader-add-des">点击上传图片</text>
+    </view>
+    <image wx:else src="{{form.img}}" class="comment-uploader-thumbnail" mode="aspectFit"></image>
+  </view>
+  <textarea class="comment-text" placeholder="发挥脑洞，给个神评论！" bindinput="onInput"></textarea>
+  <button class="comment-save" bindtap="onSave">保存</button>
+</view>

@@ -1,0 +1,14 @@
+<!--miniprogram/pages/journalDetail/journalDetail.wxml-->
+<view class="journal">
+  <view class="journal-title">{{resource.title}}</view>
+  <view class="journal-classify">{{resource.classifyValue}}</view>
+  <view class="time">
+    <text class="time-month">{{resource.timeInfo.year}}/{{resource.timeInfo.month}}</text>
+    <text class="time-date">/{{resource.timeInfo.date}}</text>
+    <text class="time-hour">{{resource.timeInfo.hours}}:{{resource.timeInfo.miniutes}}</text>
+  </view>
+
+  <view class="journal-textbox">
+    <text class="journal-text">{{resource.text}}</text>
+  </view>
+</view>

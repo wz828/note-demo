@@ -1,0 +1,7 @@
+@import "../../common/style/digest.wxss";
+
+page {
+  width: 100%;
+  height: 100%;
+}
+

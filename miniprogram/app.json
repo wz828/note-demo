@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/list/list",
+    "pages/addDigest/addDigest",
+    "pages/addComment/addComment",
+    "pages/addJournal/addJournal",
+    "pages/commentDetail/commentDetail",
+    "pages/digestDetail/digestDetail",
+    "pages/journalDetail/journalDetail"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "小确幸手账",
+    "navigationBarTextStyle": "black"
+  },
+  "cloud": true
+}

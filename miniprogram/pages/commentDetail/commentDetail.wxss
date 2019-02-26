@@ -1,0 +1,16 @@
+/* miniprogram/pages/commentDetail/commentDetail.wxss */
+.comment{
+  padding: 20rpx;
+}
+
+.comment-img {
+  width: 100%;
+  height: auto;
+}
+
+.comment-text {
+  margin-top: 28rpx;
+  font-size: 30rpx;
+  color: #494949;
+  line-height: 1.5;
+}

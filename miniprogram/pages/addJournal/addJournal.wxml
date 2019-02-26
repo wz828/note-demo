@@ -1,0 +1,11 @@
+<!--miniprogram/pages/addJournal/addJournal.wxml-->
+<view class="Journal">
+  <textarea class="Journal-title" placeholder="标题" maxlength="16" bindinput="onTitleInput"></textarea>
+  <radio-group class="classify" bindchange="radioChange">
+    <label class="classify-label" wx:for-items="{{classify}}" wx:key="name">
+      <radio value="{{item.name}}" checked="{{item.checked}}" /> <text class="classify-text">{{item.value}}</text>
+    </label>
+  </radio-group>
+  <textarea class="Journal-text" placeholder="记录一下今天的成果吧！" maxlength="-1" bindinput="onTextInput"></textarea>
+  <button class="Journal-save" bindtap="onSave">保存</button>
+</view>

@@ -1,0 +1,69 @@
+ .digest-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.digest-cnt {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 300rpx;
+  background-color: #f4f5f7;
+  padding: 0 30rpx;
+  margin-bottom: 20rpx;
+}
+
+.digest-title {
+  padding: 20rpx 30rpx;
+  font-size: 48rpx;
+  background-color: #f4f5f7;
+}
+
+.digest-info {
+  color: #494949;
+  font-size: 28rpx;
+}
+
+.digest-info-detail {
+  margin-top: 30rpx;
+  padding-right: 48rpx;
+  word-break: break-all;
+}
+
+.digest-cover {
+  flex: 0 0 200rpx;
+}
+
+.digest-cover image {
+  width: 200rpx;
+  height: 100%;
+}
+
+.digest-comment {
+  color: #494949;
+  font-size: 28rpx;
+  line-height: 1.5;
+  word-break: break-all;
+  flex: 1;
+  box-sizing: border-box;
+  padding: 30rpx;
+  width: 100%;
+}
+
+.digest {
+  flex: 0 0 204rpx;
+}
+
+.digest-cnt {
+  margin: 0;
+}
+
+.digest-save {
+  margin: 30rpx 30rpx 20rpx;
+  flex: 0 0 90rpx;
+  background-color: #33c9ff;
+  border-radius: 4rpx;
+  color: #fff;
+}
