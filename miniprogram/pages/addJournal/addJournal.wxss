@@ -29,9 +29,33 @@ page {
   margin: 25rpx;
 }
 
+/* 未选中的 背景样式 */
+
 radio .wx-radio-input {
-  width: 25rpx;
-  height: 25rpx;
+  height: 34rpx;
+  width: 34rpx;
+  border-radius: 50%;
+}
+
+/* 选中后的 背景样式 */
+
+radio .wx-radio-input.wx-radio-input-checked {
+  border: none;
+  background: #33c9ff;
+}
+
+/* 选中后的 对勾样式 */
+
+radio .wx-radio-input.wx-radio-input-checked::before {
+  border-radius: 50%;
+  width: 36rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+  text-align: center;
+  font-size: 36rpx;
+  color: #fff;
+  background: #33c9ff;
+  border: 8rpx solid #33c9ff;
 }
 
 .classify-text {
