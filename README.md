@@ -8,5 +8,5 @@
 <br/><br/>
 首页设置了过滤筛选，可以将书摘/神评论/工作日志筛选展示；<br/>
 首页展示工作日志时，css设置多行隐藏<br/>
-![image](http://github.com/wz828/note-demo/raw/master/小确幸手账体验版二维码.jpg)
+![体验版二维码](https://github.com/wz828/note-demo/raw/master/小确幸手账体验版二维码.jpg)
 
